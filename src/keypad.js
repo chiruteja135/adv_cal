@@ -298,17 +298,17 @@ function Keypad({ setInput, input ,theme}) {
         <button style={{ Color: theme === "dark" ? "#000000" : "#ffffff" }} onClick={() => handleFunction("+")}>
           +
         </button>
-        <button style={{ color: theme === "dark" ? "#000000" : "#ffffff", height: "45px", width: "100px" }} onClick={() => handleFunction("00")}>
-          0
+        <button style={{ Color: theme === "dark" ? "#000000" : "#ffffff", height: "45px", width: "100px" }} onClick={() => handleFunction("00")}>
+          00
         </button>
 
-        <button style={{ color: theme === "dark" ? "#000000" : "#ffffff", height: "45px", width: "100px" }} onClick={() => handleFunction("0")}>
+        <button style={{ Color: theme === "dark" ? "#000000" : "#ffffff", height: "45px", width: "100px" }} onClick={() => handleFunction("0")}>
           0
         </button>
-        <button style={{ color: theme === "dark" ? "#000000" : "#ffffff", height: "45px", width: "100px" }} onClick={() => handleFunction(".")}>
+        <button style={{ Color: theme === "dark" ? "#000000" : "#ffffff", height: "45px", width: "100px" }} onClick={() => handleFunction(".")}>
           .
         </button>
-        <button style={{ color: theme === "dark" ? "#000000" : "#ffffff", height: "45px", width: "100px" }} onClick={() => calculate()}>
+        <button style={{ Color: theme === "dark" ? "#000000" : "#ffffff", height: "45px", width: "100px" }} onClick={() => calculate()}>
           =
         </button>
       </div>
