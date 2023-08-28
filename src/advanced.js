@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as math from "mathjs";
 
-function Advanced({ input, setInput }) {
+function Advanced({ input, setInput ,theme}) {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {setMenuOpen(!menuOpen);};
 
@@ -20,21 +20,22 @@ function Advanced({ input, setInput }) {
     }}
 
   return (
-    <>
+    <div className={theme === "light" ? 'light' : 'dark'}>
       <div className="advanced">
         <h2 id="spl " onClick={toggleMenu}>
           Advanced
         </h2>
         {menuOpen && (
           <div className="toggle-menu">
+            <div className={theme === "light" ? 'light' : 'dark'}>
             <div>
               <button className="adv_btn" onClick={() => handleFunction("sin")}>sin</button>
               <button className="adv_btn" onClick={() => handleFunction("cos")}>cos</button>
               <button className="adv_btn" onClick={() => handleFunction("tan")}>tan</button>
               <button className="adv_btn" onClick={() => handleFunction("cot")}>cot</button>
               <button className="adv_btn" onClick={() => handleFunction("sec")}>sec</button>
-
             </div>
+
             <div>
               <button className="adv_btn" onClick={() => handleFunction("log")}>log</button>
               <button className="adv_btn" onClick={() => handleFunction("(")}>(</button>
@@ -42,6 +43,7 @@ function Advanced({ input, setInput }) {
               <button className="adv_btn" onClick={() => handleFunction("^")}>^</button>
               <button className="adv_btn" onClick={() => handleFunction("√")}>√</button>
             </div>
+
             {/* <div>
               <button className="adv_btn" onClick={() => handleFunction("π")}>π</button>
               <button className="adv_btn" onClick={() => handleFunction("e")}>e</button>
@@ -49,11 +51,10 @@ function Advanced({ input, setInput }) {
               <button className="adv_btn" onClick={() => handleFunction("RAD")}>RAD</button>
               <button className="adv_btn" onClick={() => handleFunction("DEG")}>DEG</button> 
             </div> */}
-          </div>
-        )
-        }
+          </div></div>
+        )}
       </div>
-    </>
+    </div>
   );
       }
       

@@ -51,6 +51,7 @@
   margin: 1px;
   padding: 1px;
   flex: auto;
+  
 }
 .display {
   height: 100px;
@@ -110,10 +111,10 @@ button {
   color: rgb(9, 156, 85);
 }
 
-#spl {
-  /* height: 15px; */
-  /* font-size: large; */
-}
+/* #spl {
+  height: 15px;
+  font-size: large;
+} */
 
 .advanced {
   color: rgb(231, 190, 202);
@@ -150,4 +151,22 @@ button {
   background-color: rgb(20, 14, 16);
   border-radius: 20px;
   cursor: default;
+}
+
+.dark {
+  background-color: #000000;
+  color: #ffffffd3;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+label{
+  color: #20c845;
+  font-size: larger;
+  font-weight:700;
+}
+.dark:hover{
+  cursor: pointer;
 }
