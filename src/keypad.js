@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import * as math from "mathjs";
 
-function Keypad({ setInput, input ,theme}) {
+function Keypad({ setInput, input, theme, addToCalculations }) {
   useEffect(() => {
     const handleKeyPress = (event) => {
       const key = event.key;
@@ -240,6 +240,8 @@ function Keypad({ setInput, input ,theme}) {
       else {
         const result = math.evaluate(input);
         setInput(result.toString());
+        addToCalculations(`${input} = ${result}`);
+        
       }
     } catch (error) {
       console.error("Error:", error);

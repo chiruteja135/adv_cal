@@ -1,11 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react';
+import HistoryPopup from './historypopup'; // Import the new component
+import './App.css'; // Make sure to import your CSS file
 
-function history() {
+function History({ calculations, clearHistory }) {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
+
   return (
-    <>
-    <label className='radio'>History</label>
-    </>
-  )
+    <div className="history">
+      <label>
+        <input
+          type="checkbox"
+          checked={showPopup}
+          onChange={togglePopup}
+        />
+        Show History
+      </label>
+      {showPopup && (
+        <HistoryPopup
+          calculations={calculations}
+          clearHistory={clearHistory}
+          onClose={togglePopup}
+        />
+      )}
+    </div>
+  );
 }
 
-export default history
+export default History;
