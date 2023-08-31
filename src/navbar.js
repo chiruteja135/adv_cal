@@ -1,12 +1,22 @@
 import React from 'react';
 import "./App.css";
+// import CurrencyConverter from "./exchange_rate.js";
 
-function Navbar({ theme }) {
+function Navbar({ theme,setCurrentPage }) {
   return (
-    <div className={theme === "light" ? 'light' : 'dark'}>
-      <button className='button'>calculator</button>
-      {/* <button className='button'>Exchange rate</button> */}
-      {/* <button className='button'>Unit conversion</button> */}
+    <div className={`navComp ${theme === "light" ? 'light' : 'dark'}`}>
+      <label className='navLabel' onClick={() => setCurrentPage('calculator')}>
+        Calculator
+      </label>
+      <label className='navLabel' onClick={() => setCurrentPage('exchange_rate')}>
+        Exchange rate
+      </label>
+      {/* <label className='navLabel' onClick={() => setCurrentPage('unit_conversion')}>
+        Converter
+      </label> */}
+      {/* <label className='navLabel'>Calculator</label> */}
+      {/* <label className='navLabel'><a style={{ textDecoration: 'none',color:'inherit' }} href='./exchange_rate'>Exchange rate</a></label> */}
+      {/* <label className='navLabel'><a style={{ textDecoration: 'none',color:'inherit' }} href='./exchange_rate'>Unit conversion</a></label> */}
     </div>
   );
 }

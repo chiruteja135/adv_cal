@@ -39,10 +39,9 @@
   }
 }
 .container {
-  height: 500 px;
+  height: 450 px;
   width: 483px;
   color: rgb(0, 0, 0);
-  border-radius: 20px;
   align-items: center;
   justify-items: center;
   justify-content: center;
@@ -51,6 +50,29 @@
   padding: 1px;
   flex: auto;
   
+}
+.navComp{
+  padding-top: 22px;
+  height: 73px;
+  justify-content: center;
+  text-align: center;
+  display:inline-block;
+}
+.navLabel{
+  margin: 5px;
+  padding: 10px;
+  color: rgb(130, 105, 162);
+  font-size: x-large;
+  font-weight: 200;
+  cursor: pointer;
+}
+.navLabel:hover{
+  text-decoration: underline;
+  /* background-color: #9a9a85; */
+  border-radius: 10px;
+  text-decoration-color:green;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px
 }
 .display {
   height: 100px;
@@ -85,12 +107,13 @@
   justify-content: center;
   text-align: justify;
   margin-top: 2px;
+  padding: 4px;
 }
 
 button {
   color: rgb(255, 255, 255);
   background-color: rgba(88, 68, 132, 0.852);
-  font-weight: lighter;
+  font-weight:600;
   font-size: large;
   border-radius: 25px;
   border-style: none;
@@ -230,3 +253,32 @@ label{
   margin-top: 10px;
 }
 
+.result{
+  margin: 5px;
+  padding:5px;
+  font-size: large;
+  font-weight: bold;
+  color: green;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.ccinput{
+  border-radius: 10px;
+  height: 35px;
+  font-size: large;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.fromandtoinput{
+  border-radius: 10px;
+  height: 35px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.currencyConverter{
+  height: 487px;
+}

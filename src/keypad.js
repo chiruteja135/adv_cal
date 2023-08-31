@@ -3,6 +3,7 @@ import * as math from "mathjs";
 
 function Keypad({ setInput, input, theme, addToCalculations }) {
   useEffect(() => {
+    
     const handleKeyPress = (event) => {
       const key = event.key;
       if (key.startsWith("F")) {
